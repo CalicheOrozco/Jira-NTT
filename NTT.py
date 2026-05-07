@@ -12,15 +12,15 @@ import locale
 
 def scrap():
     email = "corozcov@emeal.nttdata.com"
-    password = ""
+    password = "NR9Xq47KsQqQ!"
     emailXpath = '//*[@autocomplete="username"]'
 
     moreXpath = "//span[contains(text(),'More') and @class='dropdown-text']"
     logWorkXpath = "//span[contains(text(),'Log work') and @class='trigger-label']"
-    timeSpentXpath = '//*[@id="log-work-time-logged"]'
-    dateStartedXpath = '//*[@id="log-work-date-logged-date-picker"]'
+    timeSpentXpath = '//*[@id="log-work-form-time-logged"]'
+    dateStartedXpath = '//*[@id="log-work-form-date-logged-date-picker"]'
     commentXpath = '//body[@id="tinymce"]'
-    submitXpath = '//button[@id="log-work-submit"]'
+    submitXpath = '//button[@id="log-work-form-submit"]'
     cancelXpath = '//a[@id="log-work-cancel"]'
     iframeXpath = '//iframe[@class="tox-edit-area__iframe"]'
     successXpath = "//div[contains(@class, 'aui-message-success')]"
@@ -47,8 +47,8 @@ def scrap():
     # /Users/calicheorozco/CDriver/chromedriver
     service = Service('/Users/calicheorozco/CDriver/chromedriver')
     driver = webdriver.Chrome(service=service, options=options)
-    link = 'https://umane.emeal.nttdata.com/jiraito/browse/BATENARIS-498'
-
+    link = 'https://umane.emeal.nttdata.com/jiraito/projects/BATENARIS/issues'
+    ##https://umane.emeal.nttdata.com/jiraito/browse/BATENARIS-576
     # ABRIR EL LINK
     driver.get(link)
 
